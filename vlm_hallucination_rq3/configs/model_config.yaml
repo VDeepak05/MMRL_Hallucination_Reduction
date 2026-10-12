@@ -1,0 +1,10 @@
+# ==========================================
+# RQ3 - Member 1: Visual Perturbation Config
+# ==========================================
+model_name: "VisualPerturbationAndAdaptiveSaliency"
+top_k_ratio: 0.3       # Select top 30% highest saliency patches
+temperature: 1.0       # Temperature scaling for softmax divergence
+noise_std: 0.3         # Standard deviation multiplier for Gaussian noise
+batch_size: 2          # Test batch size
+num_patches: 196       # Standard ViT patch count (e.g., CLIP/SigLIP)
+embed_dim: 1024        # Embedding dimension size
