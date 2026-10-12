@@ -1,0 +1,328 @@
+{
+  "framework": "Instruction Contrastive Decoding (ICD - Wang et al., ACL 2024)",
+  "image_path": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\images (1).jpg",
+  "description": "The cat is dancing",
+  "verification": {
+    "model_used": "Proposed Model (Instruction Contrastive Decoding - Wang et al., ACL 2024)",
+    "description": "The cat is dancing",
+    "annotated_description": "The cat is [HALLUCINATED: dancing]",
+    "is_hallucinated": true,
+    "verdict": "HALLUCINATED",
+    "hallucination_rate_chair_i": 50.0,
+    "total_claims_checked": 2,
+    "verified_objects": [
+      "cat"
+    ],
+    "hallucinated_objects": [
+      "dancing"
+    ],
+    "methodology": "Instruction Contrastive Decoding (Wang et al., ACL 2024) + POPE (EMNLP 2023) + CHAIR",
+    "claims_breakdown": [
+      {
+        "claimed_object": "cat",
+        "status": "VERIFIED_PRESENT",
+        "standard_evidence": 0.8042,
+        "clean_evidence": 0.8042,
+        "absence_evidence": 0.1683,
+        "disturbance_evidence": 0.3515,
+        "perturbed_evidence": 0.8872,
+        "icd_calibrated_score": 28.4257,
+        "calibrated_score": 28.4257,
+        "confidence": 1.0
+      },
+      {
+        "claimed_object": "dancing",
+        "status": "HALLUCINATED_ABSENT",
+        "standard_evidence": 0.0112,
+        "clean_evidence": 0.0112,
+        "absence_evidence": 0.0166,
+        "disturbance_evidence": 0.0246,
+        "perturbed_evidence": 0.0859,
+        "icd_calibrated_score": 19.4994,
+        "calibrated_score": 19.4994,
+        "confidence": 0.0
+      }
+    ]
+  },
+  "pope_evaluation": {
+    "random": {
+      "split": "random",
+      "total_samples": 9,
+      "TP": 2,
+      "FP": 0,
+      "TN": 6,
+      "FN": 1,
+      "accuracy": 88.89,
+      "precision": 100.0,
+      "recall": 66.67,
+      "f1_score": 80.0,
+      "yes_ratio": 22.22,
+      "per_question": [
+        {
+          "question": "Is there a cat in the image?",
+          "ground_truth": "yes",
+          "model_prediction": "yes",
+          "outcome": "TP",
+          "standard_evidence": 0.8042,
+          "disturbance_evidence": 0.3515,
+          "icd_calibrated_score": 28.4257
+        },
+        {
+          "question": "Is there a fence in the image?",
+          "ground_truth": "yes",
+          "model_prediction": "yes",
+          "outcome": "TP",
+          "standard_evidence": 0.8425,
+          "disturbance_evidence": 0.4833,
+          "icd_calibrated_score": 27.8336
+        },
+        {
+          "question": "Is there a grass in the image?",
+          "ground_truth": "yes",
+          "model_prediction": "no",
+          "outcome": "FN",
+          "standard_evidence": 0.4416,
+          "disturbance_evidence": 0.148,
+          "icd_calibrated_score": 22.4549
+        },
+        {
+          "question": "Is there a elephant in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0204,
+          "disturbance_evidence": 0.0103,
+          "icd_calibrated_score": 19.2903
+        },
+        {
+          "question": "Is there a giraffe in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0268,
+          "disturbance_evidence": 0.0186,
+          "icd_calibrated_score": 20.0095
+        },
+        {
+          "question": "Is there a airplane in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0117,
+          "disturbance_evidence": 0.0346,
+          "icd_calibrated_score": 16.7565
+        },
+        {
+          "question": "Is there a helicopter in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0144,
+          "disturbance_evidence": 0.0225,
+          "icd_calibrated_score": 16.8516
+        },
+        {
+          "question": "Is there a submarine in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0046,
+          "disturbance_evidence": 0.0466,
+          "icd_calibrated_score": 13.8324
+        },
+        {
+          "question": "Is there a snowboard in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.02,
+          "disturbance_evidence": 0.057,
+          "icd_calibrated_score": 17.1859
+        }
+      ]
+    },
+    "popular": {
+      "split": "popular",
+      "total_samples": 9,
+      "TP": 3,
+      "FP": 0,
+      "TN": 6,
+      "FN": 0,
+      "accuracy": 100.0,
+      "precision": 100.0,
+      "recall": 100.0,
+      "f1_score": 100.0,
+      "yes_ratio": 33.33,
+      "per_question": [
+        {
+          "question": "Is there a cat in the image?",
+          "ground_truth": "yes",
+          "model_prediction": "yes",
+          "outcome": "TP",
+          "standard_evidence": 0.8042,
+          "disturbance_evidence": 0.3515,
+          "icd_calibrated_score": 28.4257
+        },
+        {
+          "question": "Is there a fence in the image?",
+          "ground_truth": "yes",
+          "model_prediction": "yes",
+          "outcome": "TP",
+          "standard_evidence": 0.8425,
+          "disturbance_evidence": 0.4833,
+          "icd_calibrated_score": 27.8336
+        },
+        {
+          "question": "Is there a grass in the image?",
+          "ground_truth": "yes",
+          "model_prediction": "yes",
+          "outcome": "TP",
+          "standard_evidence": 0.4416,
+          "disturbance_evidence": 0.148,
+          "icd_calibrated_score": 22.4549
+        },
+        {
+          "question": "Is there a dog in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.227,
+          "disturbance_evidence": 0.1369,
+          "icd_calibrated_score": 21.8116
+        },
+        {
+          "question": "Is there a person in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.1387,
+          "disturbance_evidence": 0.1557,
+          "icd_calibrated_score": 20.9478
+        },
+        {
+          "question": "Is there a car in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0218,
+          "disturbance_evidence": 0.0438,
+          "icd_calibrated_score": 17.4154
+        },
+        {
+          "question": "Is there a bicycle in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0269,
+          "disturbance_evidence": 0.0081,
+          "icd_calibrated_score": 19.283
+        },
+        {
+          "question": "Is there a tree in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0479,
+          "disturbance_evidence": 0.0598,
+          "icd_calibrated_score": 18.5259
+        },
+        {
+          "question": "Is there a bird in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.054,
+          "disturbance_evidence": 0.0798,
+          "icd_calibrated_score": 19.3737
+        }
+      ]
+    },
+    "adversarial": {
+      "split": "adversarial",
+      "total_samples": 8,
+      "TP": 2,
+      "FP": 0,
+      "TN": 6,
+      "FN": 0,
+      "accuracy": 100.0,
+      "precision": 100.0,
+      "recall": 100.0,
+      "f1_score": 100.0,
+      "yes_ratio": 25.0,
+      "per_question": [
+        {
+          "question": "Is there a cat in the image?",
+          "ground_truth": "yes",
+          "model_prediction": "yes",
+          "outcome": "TP",
+          "standard_evidence": 0.8042,
+          "disturbance_evidence": 0.3515,
+          "icd_calibrated_score": 28.4257
+        },
+        {
+          "question": "Is there a fence in the image?",
+          "ground_truth": "yes",
+          "model_prediction": "yes",
+          "outcome": "TP",
+          "standard_evidence": 0.8425,
+          "disturbance_evidence": 0.4833,
+          "icd_calibrated_score": 27.8336
+        },
+        {
+          "question": "Is there a dog in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.227,
+          "disturbance_evidence": 0.1369,
+          "icd_calibrated_score": 21.8116
+        },
+        {
+          "question": "Is there a wall in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.1476,
+          "disturbance_evidence": 0.1882,
+          "icd_calibrated_score": 21.1676
+        },
+        {
+          "question": "Is there a person in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.1387,
+          "disturbance_evidence": 0.1557,
+          "icd_calibrated_score": 20.9478
+        },
+        {
+          "question": "Is there a car in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0218,
+          "disturbance_evidence": 0.0438,
+          "icd_calibrated_score": 17.4154
+        },
+        {
+          "question": "Is there a bicycle in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0269,
+          "disturbance_evidence": 0.0081,
+          "icd_calibrated_score": 19.283
+        },
+        {
+          "question": "Is there a tree in the image?",
+          "ground_truth": "no",
+          "model_prediction": "no",
+          "outcome": "TN",
+          "standard_evidence": 0.0479,
+          "disturbance_evidence": 0.0598,
+          "icd_calibrated_score": 18.5259
+        }
+      ]
+    }
+  }
+}

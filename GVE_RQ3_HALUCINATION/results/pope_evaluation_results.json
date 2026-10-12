@@ -1,0 +1,34 @@
+{
+  "random": {
+    "baseline": {
+      "split": "random",
+      "icd_enabled": false,
+      "accuracy": 50.0,
+      "precision": 50.0,
+      "recall": 100.0,
+      "f1_score": 66.67,
+      "yes_ratio": 100.0,
+      "total_samples": 4
+    },
+    "icd_grounded": {
+      "split": "random",
+      "icd_enabled": true,
+      "accuracy": 50.0,
+      "precision": 50.0,
+      "recall": 100.0,
+      "f1_score": 66.67,
+      "yes_ratio": 100.0,
+      "total_samples": 4
+    },
+    "rq3_grounded": {
+      "split": "random",
+      "icd_enabled": true,
+      "accuracy": 50.0,
+      "precision": 50.0,
+      "recall": 100.0,
+      "f1_score": 66.67,
+      "yes_ratio": 100.0,
+      "total_samples": 4
+    }
+  }
+}
